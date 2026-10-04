@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jialil De Leon Andrada - Founder & Organization Leader</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0284c7', // Modern Blue
+                        secondary: '#f97316', // Vibrant Orange
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom smooth scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center justify-start p-0 m-0">
+
+    <!-- Main Container Card (Simulating NFC Viewport) -->
+    <div class="w-full max-w-md bg-slate-900 min-h-screen sm:min-h-[90vh] sm:my-6 sm:rounded-3xl sm:shadow-2xl sm:border border-slate-800 flex flex-col relative overflow-hidden">
+
+        <!-- Top Decorative Header Bar -->
+        <div class="absolute top-0 left-0 right-0 h-36 bg-gradient-to-r from-primary to-secondary opacity-90 rounded-b-[2.5rem] shadow-lg z-0"></div>
+
+        <!-- Hero / Profile Section -->
+        <div class="relative z-10 flex flex-col items-center pt-12 px-6 text-center">
+            <!-- Portrait / Avatar -->
+            <div class="relative mb-4 group">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-secondary to-primary rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <div class="relative w-32 h-32 rounded-full overflow-hidden border-4 border-slate-900 shadow-xl bg-slate-800 flex items-center justify-center">
+                    <!-- Replace the src with your actual portrait image link -->
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" 
+                         alt="Jialil De Leon Andrada" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Name & Title -->
+            <h1 class="text-2xl font-bold tracking-tight text-white mb-1">Jialil De Leon Andrada</h1>
+            <p class="text-secondary font-semibold text-sm tracking-wide uppercase mb-4 bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/20 inline-block">
+                Founder & Organization Leader
+            </p>
+        </div>
+
+        <!-- Contact Details Section -->
+        <div class="relative z-10 px-6 mt-2 mb-6">
+            <div class="bg-slate-800/80 backdrop-blur-md rounded-2xl p-4 border border-slate-700/50 shadow-inner space-y-3">
+                <!-- Mobile Number -->
+                <div class="flex items-center space-x-3 text-slate-300 text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span class="font-medium tracking-wide">+63 900 000 0000</span>
+                </div>
+                <!-- Email Add -->
+                <div class="flex items-center space-x-3 text-slate-300 text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span class="font-medium tracking-wide truncate">jialil@example.com</span>
+                </div>
+                <!-- Location -->
+                <div class="flex items-center space-x-3 text-slate-300 text-sm">
+                    <div class="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span class="font-medium tracking-wide">Bugallon, Pangasinan, Philippines</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator Hint -->
+        <div class="flex flex-col items-center justify-center mb-4 text-slate-400 text-xs animate-bounce">
+            <span>Scroll for actions</span>
+            <i class="fa-solid fa-chevron-down mt-1"></i>
+        </div>
+
+        <!-- Actions Section (After Scrolling) -->
+        <div class="flex-1 bg-slate-950/60 rounded-t-[2.5rem] p-6 border-t border-slate-800 shadow-2xl space-y-6">
+            
+            <!-- Quick Actions Group -->
+            <div>
+                <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 px-1">Quick Actions</h2>
+                <div class="grid grid-cols-2 gap-3">
+                    <!-- Save Contact (.vcf download) -->
+                    <button onclick="saveContact()" class="flex items-center justify-center space-x-2 bg-primary hover:bg-sky-600 text-white font-medium py-3 px-4 rounded-xl shadow-lg shadow-sky-500/20 transition-all transform active:scale-95 text-sm">
+                        <i class="fa-solid fa-user-plus"></i>
+                        <span>Save Contact</span>
+                    </button>
+                    <!-- Call -->
+                    <button onclick="triggerAction('tel:+639000000000')" class="flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium py-3 px-4 rounded-xl border border-slate-700 transition-all transform active:scale-95 text-sm">
+                        <i class="fa-solid fa-phone text-primary"></i>
+                        <span>Call</span>
+                    </button>
+                    <!-- Text / SMS -->
+                    <button onclick="triggerAction('sms:+639000000000')" class="flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium py-3 px-4 rounded-xl border border-slate-700 transition-all transform active:scale-95 text-sm">
+                        <i class="fa-solid fa-comment-sms text-secondary"></i>
+                        <span>Text / SMS</span>
+                    </button>
+                    <!-- Send Email -->
+                    <button onclick="triggerAction('mailto:jialil@example.com')" class="flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium py-3 px-4 rounded-xl border border-slate-700 transition-all transform active:scale-95 text-sm">
+                        <i class="fa-solid fa-paper-plane text-primary"></i>
+                        <span>Email</span>
+                    </button>
+                    <!-- Messenger -->
+                    <button onclick="triggerAction('https://m.me/yourusername')" class="flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium py-3 px-4 rounded-xl border border-slate-700 transition-all transform active:scale-95 text-sm">
+                        <i class="fa-brands fa-facebook-messenger text-sky-400"></i>
+                        <span>Messenger</span>
+                    </button>
+                    <!-- Google Maps -->
+                    <button onclick="triggerAction('https://maps.google.com/?q=Bugallon+Pangasinan')" class="flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium py-3 px-4 rounded-xl border border-slate-700 transition-all transform active:scale-95 text-sm">
+                        <i class="fa-solid fa-map-location-dot text-secondary"></i>
+                        <span>Maps</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Social Media & Links Group -->
+            <div>
+                <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 px-1">Connect Online</h2>
+                <div class="space-y-3">
+                    <!-- Facebook Page -->
+                    <button onclick="triggerAction('https://facebook.com/yourpage')" class="w-full flex items-center justify-between bg-slate-800 hover:bg-slate-700/80 p-3.5 rounded-xl border border-slate-700/80 transition-all transform active:scale-95 group">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-blue-600/20 text-blue-500 flex items-center justify-center text-lg">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <span class="font-medium text-slate-200 text-sm">Facebook Page</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-500 group-hover:text-slate-300 transition-colors text-xs"></i>
+                    </button>
+
+                    <!-- Website Link -->
+                    <button onclick="triggerAction('https://yourwebsite.com')" class="w-full flex items-center justify-between bg-slate-800 hover:bg-slate-700/80 p-3.5 rounded-xl border border-slate-700/80 transition-all transform active:scale-95 group">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <span class="font-medium text-slate-200 text-sm">Official Website</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right text-slate-500 group-hover:text-slate-300 transition-colors text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer Branding -->
+            <div class="pt-2 pb-4 text-center">
+                <p class="text-xs text-slate-500 font-medium">Digital NFC Business Card &bull; Powered by Modern Web</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Handling Automatic Redirection and vCard Generation -->
+    <script>
+        // Automatically redirects user to phone dialer, external links, social apps, etc.
+        function triggerAction(url) {
+            // Slight delay for active scale animation before redirecting
+            setTimeout(() => {
+                window.location.href = url;
+            }, 100);
+        }
+
+        // Generates and downloads a .vcf file so phones can instantly import contact info
+        function saveContact() {
+            const vCardData = 
+`BEGIN:VCARD
+VERSION:3.0
+FN:Jialil De Leon Andrada
+N:Andrada;Jialil;De Leon;;
+TITLE:Founder & Organization Leader
+TEL;TYPE=CELL:+639000000000
+EMAIL:jialil@example.com
+ADR:;;Bugallon, Pangasinan;;;;Philippines
+URL:https://yourwebsite.com
+END:VCARD`;
+
+            const blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Jialil_De_Leon_Andrada.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
